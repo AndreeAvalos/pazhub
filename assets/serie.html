@@ -31,7 +31,7 @@
 	$(document).ready(function(){
 	var paginas = 0;
 		
-	$.getJSON('http://35.194.48.100:3000/getSeriePaginas', function(data) {
+	$.getJSON('http://35.188.182.92:3000/getSeriePaginas', function(data) {
 		$.each(data,function(key,value){			
 			paginas = parseInt(value.paginas)
 			paginas=paginas;
@@ -47,7 +47,7 @@
 	if(paginaactual == null){
 		paginaactual=1;
 	}
-		$.getJSON('http://35.194.48.100:3000/viewCatalogoSeries/'+paginaactual, function(data) {
+		$.getJSON('http://35.188.182.92:3000/viewCatalogoSeries/'+paginaactual, function(data) {
 			var listavideo='';
 			$.each(data,function(key,value){
 				listavideo += '<a href="episodios.html?serie='+value.serieId+'">';
